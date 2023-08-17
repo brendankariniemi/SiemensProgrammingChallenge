@@ -15,12 +15,11 @@ This project was created during the Siemens 2023 summer intern programming chall
 - Battery switch which gives the operator the ability to optimize load balancing for the upcoming day by automatically charging the battery during periods of low load and discharging it during higher load intervals.
 - Siemens login screen with multiple access levels (Ex: Only admin can control battery usage)
 
-<img src="https://github.com/brendankariniemi/SiemensProgrammingChallenge/assets/138073658/e90dbfa6-080d-478c-a39b-b3f9015b6190" width="300" alt="Screenshot">
-<img src="https://github.com/brendankariniemi/SiemensProgrammingChallenge/assets/138073658/e140dd92-98cf-41c5-a523-1f927f229482" width="300" alt="Screenshot">
-<img src="https://github.com/brendankariniemi/SiemensProgrammingChallenge/assets/138073658/9375f96f-daad-47b7-9683-891ce75640b8" width="300" alt="Screenshot">
-<img src="https://github.com/brendankariniemi/SiemensProgrammingChallenge/assets/138073658/64d7b80a-c01c-4230-be77-db10e881044a" width="300" alt="Screenshot">
-<img src="https://github.com/brendankariniemi/SiemensProgrammingChallenge/assets/138073658/96e8bb87-4582-4352-811e-0217a5fb0a29" width="300" alt="Screenshot">
-
+<img src="https://github.com/brendankariniemi/SiemensProgrammingChallenge/assets/138073658/d49e6a1b-6bc7-4dc2-a991-125745358be8" width="300" alt="Screenshot">
+<img src="https://github.com/brendankariniemi/SiemensProgrammingChallenge/assets/138073658/ec44096b-e8c4-4dbf-84e5-46b8c49d1840" width="300" alt="Screenshot">
+<img src="https://github.com/brendankariniemi/SiemensProgrammingChallenge/assets/138073658/ab5e6775-3454-405f-ac7f-2bbc91c9adf0" width="300" alt="Screenshot">
+<img src="https://github.com/brendankariniemi/SiemensProgrammingChallenge/assets/138073658/6eab0642-bf75-4873-a2c5-ee89f549667f" width="300" alt="Screenshot">
+<img src="https://github.com/brendankariniemi/SiemensProgrammingChallenge/assets/138073658/cbbf2aaf-6cc9-4a0e-9e3b-eea9c3d42ca3" width="300" alt="Screenshot">
 
 ## Getting Started
 
