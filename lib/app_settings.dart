@@ -8,28 +8,32 @@ final appSettingsProvider = StateNotifierProvider<AppSettingsNotifier, AppSettin
 
 class AppSettings {
   final bool isFullScreen;
-  final bool isLoading;
+  final bool isLoggingIn;
   final bool isDarkMode;
   final bool isCharging;
+  final String loggedInUser;
 
   AppSettings({
     required this.isFullScreen,
-    required this.isLoading,
+    required this.isLoggingIn,
     required this.isDarkMode,
     required this.isCharging,
+    required this.loggedInUser
   });
 
   AppSettings copyWith({
     bool? isFullScreen,
-    bool? isLoading,
+    bool? isLoggingIn,
     bool? isDarkMode,
     bool? isCharging,
+    String? loggedInUser,
   }) {
     return AppSettings(
       isFullScreen: isFullScreen ?? this.isFullScreen,
-      isLoading: isLoading ?? this.isLoading,
+      isLoggingIn: isLoggingIn ?? this.isLoggingIn,
       isDarkMode: isDarkMode ?? this.isDarkMode,
       isCharging: isCharging ?? this.isCharging,
+      loggedInUser: loggedInUser ?? this.loggedInUser,
     );
   }
 }
@@ -37,9 +41,10 @@ class AppSettings {
 class AppSettingsNotifier extends StateNotifier<AppSettings> {
   AppSettingsNotifier() : super(AppSettings(
     isFullScreen: false,
-    isLoading: true,
+    isLoggingIn: true,
     isDarkMode: false,
     isCharging: false,
+    loggedInUser: '',
   ));
 
   void toggleFullScreen() {
@@ -62,11 +67,17 @@ class AppSettingsNotifier extends StateNotifier<AppSettings> {
   }
 
   void toggleCharging(EnergyDataNotifier energyDataNotifier) {
-    energyDataNotifier.setEnergyStorage(!state.isCharging);
-    state = state.copyWith(isCharging: !state.isCharging);
+    if (state.loggedInUser == 'admin') {
+      energyDataNotifier.setEnergyStorage(!state.isCharging);
+      state = state.copyWith(isCharging: !state.isCharging);
+    }
   }
 
-  void toggleLoading() {
-    state = state.copyWith(isLoading: false);
+  void toggleLoggingIn() {
+    state = state.copyWith(isLoggingIn: false);
+  }
+
+  void setLoggedInUser(String user) {
+    state = state.copyWith(loggedInUser: user);
   }
 }

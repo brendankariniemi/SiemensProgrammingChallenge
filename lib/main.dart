@@ -5,7 +5,7 @@ import 'energy_chart.dart';
 import 'energy_table.dart';
 import 'energy_data.dart';
 import 'energy_log.dart';
-import 'loading_screen.dart';
+import 'login_screen.dart';
 
 void main() async {
   runApp(
@@ -24,11 +24,10 @@ class MyApp extends ConsumerWidget {
     final appSettingsNotifier = ref.watch(appSettingsProvider.notifier);
     final energyDataNotifier = ref.watch(energyDataProvider.notifier);
 
-    if (appSettingsData.isLoading) {
-      _setLoadingScreen(appSettingsNotifier);
+    if (appSettingsData.isLoggingIn) {
       return const MaterialApp(
         debugShowCheckedModeBanner: false,
-        home: LoadingScreen(),
+        home: LoginScreen(),
       );
     } else {
       return MaterialApp(
@@ -100,10 +99,5 @@ class MyApp extends ConsumerWidget {
         ),
       );
     }
-  }
-
-  Future<void> _setLoadingScreen(AppSettingsNotifier appSettingsNotifier) async {
-    await Future.delayed(const Duration(seconds: 2));
-    appSettingsNotifier.toggleLoading();
   }
 }

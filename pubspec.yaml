@@ -62,6 +62,10 @@ dev_dependencies:
 flutter:
   assets:
     - assets/icon.png
+  fonts:
+    - family: Frutiger
+      fonts:
+        - asset: assets/FrutigerRegular.ttf
 
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
